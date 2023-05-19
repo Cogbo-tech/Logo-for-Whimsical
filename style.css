@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.circle::before{
+    opacity: 0;
+    transition-property: ;
+}
+.circle{
+    width: 20em;
+    height: 20em;
+    background-image:linear-gradient(45deg,  rgb(222, 20, 222), rgb(128,0,128));
+    margin: 200px auto;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* animation: forwards; */
+    transition: all 2s ease-in-out;
+    opacity: 1;
+    
+}
+/* .light, .dark ::before{
+    content: "";
+    left:4rem;
+    right: 5rem;
+} */
+.light{
+    width: 40%;
+    height: 40%;
+    border: 9px solid pink;
+    transform: rotate(45deg);
+    position: relative;
+    margin: auto;
+    border-radius: 8px;
+    left: 3rem;
+    animation: zoom-out 3s cubic-bezier(0.45, 1, 0.45, 1);
+}
+/* .light:hover{
+   background-color: pink;
+   /* transition-delay: 0.5s; */
+   /* transition: all 0.5s ease-out; */
+/* } */
+
+.dark{
+    width: 40%;
+    height: 40%;
+    border: 7px solid white;
+    transform: rotate(45deg);
+    position: relative;
+    margin: auto;
+    border-radius: 8px;
+    position: relative;
+    right: 3rem;
+    background-color: white;
+    animation: zoom-in 3s cubic-bezier(0.45, 1, 0.45, 1) ;
+}
+
+/* .dark:hover{
+    background-color: unset;
+    transition: all 0.5s ease-out;
+} */
+@keyframes zoom-out {
+    0%{
+      transform: rotate(0deg);
+      position: relative;
+      left: unset;
+    }
+    100%{
+        transform: rotate(45deg);
+        position: relative;
+        left: 3rem;
+    }
+
+}
+@keyframes zoom-in {
+    0%{
+      transform: rotate(0deg);
+      position: relative;
+      right: unset;
+    }    
+    100%{
+        transform: rotate(45deg);
+        position: relative;
+        right: 3rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .circle{
+        width: 12em;
+        height: 12em;
+    }
+
+.dark{
+    width: 35%;
+    height: 35%;
+    right: 2rem;
+}
+.light{
+    width: 35%;
+    height: 35%;
+    left: 2rem;
+}
+
+}
+
+footer{
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+  
